@@ -20,6 +20,10 @@ def predictController():
     response["prediction"] = float(predictedPrice[0])
     return jsonify(response),200
 
+@app.route("/", methods=['GET'])
+def defaultController():
+     return("Hello")
+
 
 if __name__ == '__main__':
      app.run(port="9000", host="0.0.0.0")
